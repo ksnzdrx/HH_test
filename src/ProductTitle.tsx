@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Arrow from './Arrow';
-import NewTag from './newTag';
+import NewTag from './NewTag';
 
 interface ProductTitleProps {
   name: string;
@@ -12,7 +12,7 @@ interface ProductTitleProps {
 const ProductTitle: React.FC<ProductTitleProps> = ({ name, isNew, isCollapsed }) => (
   <View style={styles.titleContainer}>
       <View style={isNew ? styles.nameContainerWithNew : styles.nameContainerFull}>
-        <Text style={styles.title} numberOfLines={isCollapsed ? 1 : 2}>
+        <Text style={styles.title} numberOfLines={isCollapsed ? 1 : undefined}>
           {name}
         </Text>
       </View>
